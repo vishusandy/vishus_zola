@@ -1,0 +1,33 @@
+name = "Vishus Theme"
+description = "A flexible and simplistic-looking theme designed for code blogs"
+license = "MIT"
+homepage = "https://github.com/vishusandy/vishus_zola"
+# The minimum version of Zola required
+min_version = "0.1.0"
+# An optional live demo URL
+demo = "https://vishusandy.github.io/"
+
+# Any variable there can be overridden in the end user `config.toml`
+# You don't need to prefix variables by the theme name but as this will
+# be merged with user data, some kind of prefix or nesting is preferable
+# Use snake_casing to be consistent with the rest of Zola
+[extra]
+katex_enable = true      # include files for rendering math content
+katex_auto_render = true # automatically render math content
+enable_top_link = true   # if true show a link to the top of the page in the header
+
+# when an updated date is specified you can automatically show a link to the git repo to show the file's history
+# leave blank to disable
+git_file_changes = "https://github.com/vishusandy/vishusandy.github.io/commits/main/content"
+
+[[extra.links]]
+text = "Links"
+url = "/pages/links"
+static_url = false   # if true the url is not a local markdown file
+new_window = false
+attributes = ""      # custom attributes to add to the <a> tag
+
+# The theme author info: you!
+[author]
+name = "Vishus"
+homepage = "https://vishusandy.github.io/"
