@@ -1,0 +1,38 @@
+section.section h2,
+section.section h3,
+section.section h4,
+section.section h5,
+section.section h6 {
+    margin-top: 1rem;
+}
+
+.subtitle {
+    font-size: 1rem !important;
+}
+
+.subtitle strong {
+    font-weight: 400;
+}
+
+
+ul {
+    margin-top: .3rem;
+}
+
+li {
+    margin-bottom: .4rem;
+}
+
+details h2 {
+    display: inline;
+}
+
+details {
+    margin-bottom: 1rem;
+}
+
+
+a {
+    color: #212121;
+    text-decoration: underline;
+}

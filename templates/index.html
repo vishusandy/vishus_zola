@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block css %}<link rel="stylesheet" href='{{ get_url(path="index.css") | safe }}'>{% endblock css %}
+
+{% block content %}
+    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
+    {% for page in paginator.pages %}
+        <article>
+            <div class="date">
+                <time datetime="{{ page.date }}">{{ page.date }}</time>
+            </div>
+            <div class="title">
+                <a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a>
+            </div>
+        </article>
+    {% endfor %}
+    <nav class="pagination">
+        {% if paginator.previous %}
+        <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
+        {% endif %}
+        {% if paginator.next %}
+        <a class="next" href="{{ paginator.next }}">Next ›</a>
+        {% endif %}
+    </nav>
+{% endblock content %}

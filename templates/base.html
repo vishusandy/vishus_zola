@@ -1,0 +1,26 @@
+{% import "macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <title>{% block title %}{{ config.title }}{% if page %} - {{ page.title }}{% endif %}{% endblock title %}</title>
+        <link rel="stylesheet" href='{{ get_url(path="base.css") | safe }}'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        {% block css %} {% endblock css %}
+        {% block js %} {% endblock js %}
+        {{ macros::toplink_script() }}
+    </head>
+    <body id="top">
+        {{ macros::header() }}
+        {% block page_title %} {% endblock %}
+        {% block toc %} {% endblock%}
+        <div class="container">
+            <section class="section">
+                {% block content %} {% endblock %}
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+/**
+ * Based on: https://github.com/tinkertrain/panda-syntax-vscode
+ * Author: Annmarie Switzer <https://github.com/annmarie-switzer>
+ */
+
+
+
+@mixin codefence-lang($lang) {
+    content: $lang;
+    margin: calc(-1.2rem - 1px) calc(-1.2rem - 1px) 0px auto;
+    display: block;
+    text-align: right;
+    font-size: .8rem;
+    background-color: #878a8c;
+    float: right;
+    padding: 2px 1rem 3px 1rem;
+    // font-family: $fencelabel-stack;
+    font-family: var(--title-fonts);
+    // text-shadow: 1px 1px 2px #aaaaaa;
+    color: #eee;
+}
+
+
+code:not([data-lang]) {
+    background-color: rgba(27, 31, 35, .09);
+    border-radius: 3px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: .3em .4em;
+    font-family: SFMono-Regular,
+        Consolas,
+        Liberation Mono,
+        Menlo,
+        Courier,
+        monospace;
+}
+
+pre[style] code {
+    display: block;
+    color: #000;
+    background: #f6f8fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    padding: 1.2rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    // text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'DejaVu Sans Mono', monospace;
+    tab-size: 4;
+    font-size: 1rem;
+    word-spacing: normal;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+pre[data-lang=python] code::before {
+    @include codefence-lang("Python")
+}
+
+pre[data-lang=bash] code::before {
+    @include codefence-lang("Bash")
+}
+
+pre[data-lang=rust] code::before {
+    @include codefence-lang("Rust")
+}
+
+pre[data-lang=javascript] code::before {
+    @include codefence-lang("JavaScript")
+}
+
+pre[data-lang=typescript] code::before {
+    @include codefence-lang("TypeScript")
+}
+
+pre[data-lang=go] code::before {
+    @include codefence-lang("Go")
+}
+
+pre[data-lang=c] code::before {
+    @include codefence-lang("C")
+}
+
+pre[data-lang="c++"] code::before {
+    @include codefence-lang("C++")
+}
+
+pre[data-lang="c#"] code::before {
+    @include codefence-lang("C#")
+}
+
+pre[data-lang=java] code::before {
+    @include codefence-lang("Java")
+}
+
+pre[data-lang=html] code::before {
+    @include codefence-lang("HTML")
+}
+
+pre[data-lang=json] code::before {
+    @include codefence-lang("JSON")
+}
+
+pre[data-lang=php] code::before {
+    @include codefence-lang("PHP")
+}
+
+pre[data-lang="re"] code::before {
+    @include codefence-lang("Regular Expression")
+}
+
+pre[data-lang=sql] code::before {
+    @include codefence-lang("SQL")
+}
+
+pre[data-lang=scss] code::before {
+    @include codefence-lang("SCSS")
+}
+
+pre[data-lang=sass] code::before {
+    @include codefence-lang("Sass")
+}
+
+pre[data-lang=toml] code::before {
+    @include codefence-lang("TOML")
+}
+
+pre[data-lang=yaml] code::before {
+    @include codefence-lang("YAML")
+}
+
+pre[data-lang=ruby] code::before {
+    @include codefence-lang("Ruby")
+}
+
+pre[data-lang=text] code::before {
+    @include codefence-lang("Text")
+}

@@ -1,0 +1,70 @@
+
+{% macro header() %}
+<header>
+    <div class="title">
+        <a href="{{ get_url(path="/") | safe }}" title="Home" alt="Homepage">{{ config.title }}</a>
+    </div>
+    
+    {% if config.extra.enable_top_link and page %}
+    <div class="menu">
+        <a href="#top" id="top-link" title="Go to top of page">Top</a>
+    </div>
+    {% endif %}
+    
+    {% if config.extra.links %}
+    <div class="links">
+        <ul>
+            {% for link in config.extra.links %}
+            <li>
+                <a href="{% if link.static_url %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url) | safe }}{% endif %}"
+                    {%- if link.attribues %} {{ link.attribues | safe }}{% endif -%}
+                    {%- if link.new_window %} target="_blank" rel="noreferrer noopener"{% endif -%}
+                >{{ link.text | safe }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</header>
+{% endmacro input %}
+
+{% macro toplink_script() %}
+{% if config.extra.enable_top_link %}
+<script src="{{ get_url(path="js/top.js") }}"></script>
+<noscript>
+    <style>
+        #top-link {
+            opacity: 1;
+        }
+    </style>
+</noscript>
+{% endif %}
+{% endmacro toplink_noscript %}
+
+{% macro header_toc(page) %}
+{% if page.toc and not page.hide_toc %}
+<section class="toc" id="toc">
+    <div class="toc">
+        <h5>Table of Contents</h5>
+        <hr>
+        <ul>
+            {% for h1 in page.toc %}
+            <li>
+                <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                {% if h1.children %}
+                <ul>
+                    {% for h2 in h1.children %}
+                    <li>
+                        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endif %}
+{% endmacro tocs %}
+

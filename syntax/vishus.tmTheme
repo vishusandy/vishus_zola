@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>author</key>
+    <string>Mattia Astorino</string>
+    <key>colorSpaceName</key>
+    <string>sRGB</string>
+    <key>name</key>
+    <string>Material-Theme-Lighter</string>
+    <key>semanticClass</key>
+    <string>material.theme.lighter</string>
+    <key>settings</key>
+    <array>
+        <dict>
+            <key>settings</key>
+            <dict>
+                <key>background</key>
+                <string>#f6f8fa</string>
+                <key>foreground</key>
+                <string>#000</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>URL</string>
+            <key>scope</key>
+            <string>*url*, *link*, *uri*</string>
+            <key>settings</key>
+            <dict>
+                <key>fontStyle</key>
+                <string>underline</string>
+                <key>foreground</key>
+                <string>#bb4188</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Comments</string>
+            <key>scope</key>
+            <string>comment, punctuation.definition.comment</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#606e7c</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Functions, Numbers, Tags, Templates, Names</string>
+            <key>scope</key>
+            <string>entity.name.function, support.function, constant.numeric, keyword.other.template, entity.name.class, entity.name.type.class, support.type, string.other.link.title.markdown, entity.name.tag, meta.tag.sgml, meta.tag</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#bb4188</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Keyword</string>
+            <key>scope</key>
+            <string>keyword, markup.deleted</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#0077aa</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Operators</string>
+            <key>scope</key>
+            <string>keyword.operator</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#000</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Punctuation</string>
+            <key>scope</key>
+            <string>punctuation</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#999</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>String, Symbol</string>
+            <key>scope</key>
+            <string>string, string.quoted, constant.other.symbol, markup.inserted</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#669900</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Section</string>
+            <key>scope</key>
+            <string>punctuation.section, keyword.other.substitution</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#3787c7</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Regexp, Variable</string>
+            <key>scope</key>
+            <string>string.regexp, variable.language</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#cc5e91</string>
+            </dict>
+        </dict>
+        
+        
+        <dict>
+            <key>name</key>
+            <string>Operator, Meta, Misc</string>
+            <key>scope</key>
+            <string>keyword.operator, constant.other.color</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#c56200</string>
+            </dict>
+        </dict>
+        
+        <dict>
+            <key>name</key>
+            <string>Params</string>
+            <key>scope</key>
+            <string>variable.parameter</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#676B79</string>
+            </dict>
+        </dict>
+        
+    </array>
+    <key>uuid</key>
+    <string>133d1250-19c6-4565-bc93-b37fd36f7fc9</string>
+</dict>
+</plist>
