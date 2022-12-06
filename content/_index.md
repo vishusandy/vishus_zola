@@ -1,9 +1,9 @@
 +++
-title = "Vishus Blog"
+title = "Index"
 sort_by = "date"
 template = "index.html"
 page_template = "article.html"
 insert_anchor_links = "left"
 in_search_index = true
-paginate_by = 5
+paginate_by = 10
 +++

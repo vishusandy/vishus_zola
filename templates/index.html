@@ -3,7 +3,6 @@
 {% block css %}<link rel="stylesheet" href='{{ get_url(path="index.css") | safe }}'>{% endblock css %}
 
 {% block content %}
-    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
     {% for page in paginator.pages %}
         <article>
             <div class="date">
@@ -14,6 +13,7 @@
             </div>
         </article>
     {% endfor %}
+    {% if paginator.previous or paginator.next %}
     <nav class="pagination">
         {% if paginator.previous %}
         <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
@@ -22,4 +22,5 @@
         <a class="next" href="{{ paginator.next }}">Next ›</a>
         {% endif %}
     </nav>
+    {% endif %}
 {% endblock content %}

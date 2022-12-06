@@ -7,16 +7,17 @@ base_url = "https://vishusandy.github.io"
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# taxonomies = [{ name = "tags", feed = true }]
+generate_feed = true
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+
+# Use the included `syntax/vishus.tmTheme` for syntax highlighting
 highlight_theme = "vishus"
 extra_syntaxes_and_themes = ["syntax"]
 
@@ -30,30 +31,43 @@ external_links_no_follow = true
 # Whether to set rel="noreferrer" for all external links
 external_links_no_referrer = true
 
+[search]
+include_title = true
+include_description = true
+include_path = false
+include_content = true
+
 [extra]
 katex_enable = true      # include files for rendering math content
 katex_auto_render = true # automatically render math content
 enable_top_link = true   # if true show a link to the top of the page in the header
 
+# when an updated date is specified you can automatically show a link to the git repo to show the file's history
+# leave blank to disable
+git_file_changes = "https://github.com/vishusandy/vishusandy.github.io/commits/main/content"
+
+# Adds a "Links" link in the header
 [[extra.links]]
 text = "Links"
 url = "/pages/links"
 static_url = false   # if true the url is not a local markdown file
-new_window = false
+new_window = false   # whether to open the link in a new window
+attributes = ""      # custom attributes to add to the <a> tag
 
 [[extra.links]]
 text = "<i class=\"link-icon fa-brands fa-github\" alt=\"Go to my GitHub profile\" title=\"My GitGub\"></i>"
 url = "https://github.com/vishusandy"
-# if true the url is not a local markdown file
+# this is a static url since it's not a link produced by Zola
 static_url = true
 new_window = true
+attributes = "aria-label=\"Open Github profile in a new window\""
 
 [[extra.links]]
 text = "<i class=\"link-icon fa-brands fa-mastodon\" alt=\"Go to my Mastodon profile\" title=\"My Mastodon profile\"></i>"
 url = "https://social.linux.pizza/@vishus"
-# if true the url is not a local markdown file
+# this is a static url since it's not a link produced by Zola
 static_url = true
-# new window will be default override the rel attribute
+# `new_window=true` would override the `rel="me"` attribute; use `attributes` to open the link in a new window
 new_window = false
 # extra attributes - add the rel="me" for mastodon
-attribues = "target=\"_blank\" rel=\"me noreferrer noopener\""
+attribues = "target=\"_blank\" rel=\"me noreferrer noopener\" aria-label=\"Open Mastodon profile in a new window\""

@@ -1,7 +1,7 @@
 
 # Vishus Theme for Zola
 
-A configurable and ready-to-use blog template for [Zola](https://www.getzola.org/).
+A configurable and simplistic dev blog template for [Zola](https://www.getzola.org/).
 
 Demo: [https://vishusandy.github.io](https://vishusandy.github.io)
 
