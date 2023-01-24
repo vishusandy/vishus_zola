@@ -81,7 +81,7 @@ text = "&copy; 2023 Andrew Prindle"
 static_url = true                   # if true the url is not a local markdown file
 new_window = true                   # whether to open the link in a new window
 attributes = ""                     # custom attributes to add to the <a> tag
-pages_only = false
+pages_only = true
 
 [[extra.footer_links]]
 url = "https://github.com/vishusandy/vishusandy.github.io"
