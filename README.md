@@ -17,7 +17,7 @@ See [installation](install.md)
 
 ## Configuration
 
-Everything can be configured in the `[extra]` section of the [`config.toml`](config.toml) file.  Descriptions of each variable are provided there.
+Everything can be configured in the `[extra]` section of either [`theme.toml`](theme.toml) or [`config.toml`](config.toml).  Descriptions of each variable are provided there.
 
 ## Features
 
@@ -30,7 +30,7 @@ Everything can be configured in the `[extra]` section of the [`config.toml`](con
 - custom syntax highlighting theme for code highlighting
     - displays language type for many languages
 - link to git repo to show file history for updated pages
-- header displays a specified list of links
+- header and footer display a specified list of links
 - cool "top" link to go back to the top of a page
 - optional article description above the table of contents
 
