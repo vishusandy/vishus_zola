@@ -1,0 +1,8 @@
+public/
+/documents/*
+theme.toml
+README.md
+article.png
+index.png
+screenshot.png
+code.png

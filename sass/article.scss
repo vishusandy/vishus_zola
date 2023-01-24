@@ -1,11 +1,14 @@
-$font-stack: Georgia, Palatino, "Palatino Linotype", "Times New Roman", "DejaVu Serif", serif, "Apple Color Emoji", "Segoe UI Emoji";
+@import 'vars.scss';
+@import 'figures.scss';
 
-$dfn-hover: #504545;
+body p {
+    line-height: 1.5;
+    min-width: 200px;
+}
 
 article {
-    min-width: 200px;
     line-height: 1.5;
-    padding-bottom: 5rem;
+    // padding-bottom: 5rem;
 }
 
 h1.title {
@@ -38,51 +41,6 @@ dfn {
 }
 
 dfn:hover {
-    color: $dfn-hover;
-    text-decoration: underline $dfn-hover;
-}
-
-figure:not(.code) img,
-figure:not(.code) img.img-center {
-    margin-bottom: 0.4rem;
-}
-
-figure {
-    margin-bottom: 3rem;
-}
-
-figcaption {
-    color: #4c4e52;
-    text-align: center;
-    width: 70%;
-    margin: 0px auto;
-}
-
-figcaption.title {
-    color: #282828;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-figure img {
-    max-width: 100%;
-}
-
-.img-center {
-    display: block;
-    margin: 0.2rem auto 2rem;
-}
-
-.img-border {
-    padding: 4px;
-    border: 1px solid #aaa;
-}
-
-.img-full {
-    max-width: 100%;
-}
-
-a {
-    color: #212121;
-    text-decoration: underline;
+    color: $dfn-hover-color;
+    text-decoration: underline $dfn-hover-color;
 }

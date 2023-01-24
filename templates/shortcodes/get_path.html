@@ -1,0 +1,5 @@
+{%- if path -%}
+{{ get_url(path=path) }}
+{%- else -%}
+{{ get_url(path='/') }}
+{%- endif -%}

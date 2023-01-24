@@ -1,0 +1,51 @@
+@import 'vars.scss';
+
+figure:not(.code) img,
+figure:not(.code) img.img-center {
+    margin-bottom: 0.4rem;
+}
+
+figure {
+    margin-bottom: 3rem;
+}
+
+figcaption {
+    color: $figure-caption-color;
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+figcaption.title {
+    color: $figure-title-color;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+figure video {
+    display: block;
+    margin-bottom: 0.8rem;
+    // margin-top: 0.2rem;
+}
+
+figure video {
+    max-width: 100%;
+}
+
+figure video.full {
+    width: 100%;
+}
+
+.img-center {
+    display: block;
+    margin: 0.2rem auto 2rem;
+}
+
+.img-border {
+    padding: 4px;
+    border: 1px solid $img-border-color;
+}

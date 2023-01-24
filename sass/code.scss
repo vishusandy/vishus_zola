@@ -1,52 +1,58 @@
+@import 'vars.scss';
+
 /**
  * Based on: https://github.com/tinkertrain/panda-syntax-vscode
  * Author: Annmarie Switzer <https://github.com/annmarie-switzer>
  */
 
 
-
-@mixin codefence-lang($lang) {
-    content: $lang;
+pre[data-lang] code::before {
     margin: calc(-1.2rem - 1px) calc(-1.2rem - 1px) 0px auto;
     display: block;
     text-align: right;
     font-size: .8rem;
-    background-color: #878a8c;
+    background-color: $code-block-lang-bg;
     float: right;
     padding: 2px 1rem 3px 1rem;
-    // font-family: $fencelabel-stack;
     font-family: var(--title-fonts);
-    // text-shadow: 1px 1px 2px #aaaaaa;
-    color: #eee;
+    color: $code-block-lang-color;
+
+}
+
+@mixin codefence-lang($lang) {
+    content: $lang;
 }
 
 
+// Inline code blocks
 code:not([data-lang]) {
-    background-color: rgba(27, 31, 35, .09);
+    background-color: $inline-code-bg;
     border-radius: 3px;
     font-size: 0.85rem;
     margin: 0;
     padding: .3em .4em;
-    font-family: SFMono-Regular,
-        Consolas,
-        Liberation Mono,
-        Menlo,
-        Courier,
-        monospace;
+    font-family: var(--code-fonts);
 }
 
+@media only screen and (min-width: $min-body-size) {
+    pre[style] {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+// Code blocks
 pre[style] code {
     display: block;
-    color: #000;
-    background: #f6f8fa;
-    border: 1px solid #e5e5e5;
+    color: $code-block-color;
+    background: $code-block-bg;
+    border: 1px solid $code-block-border;
     border-radius: 0;
     padding: 1.2rem;
     margin-left: 0rem;
     margin-right: 0rem;
     margin-bottom: 1rem;
-    // text-shadow: 0 1px white;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'DejaVu Sans Mono', monospace;
+    font-family: var(--code-fonts);
     tab-size: 4;
     font-size: 1rem;
     word-spacing: normal;

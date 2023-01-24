@@ -1,0 +1,28 @@
+
+<figure>{% if title_caption -%}
+    <figcaption class="title">{{ title_caption | safe }}</figcaption>
+{%- endif -%}
+
+{%- set extras = "" -%}
+{%- if classes -%}
+    {%- set extras = extras ~ classes -%}
+{%- endif -%}
+{%- if not centered or centered != "false" -%}
+    {%- set extras = "img-center " ~ extras -%}
+{%- endif -%}
+{%- if border -%}
+{%- set extras = "img-border " ~ extras -%}
+{%- endif -%}
+{%- set extras = extras | trim_end %}
+    <a href="{{ url | safe }}">
+        <img src="{{ url | safe }}"
+            {% if title %} title="{{ title }}" 
+            {% endif -%}
+            {% if alt %} alt="{{ alt }}" 
+            {% endif -%}
+            {% if extras %} class="{{ extras }}"{% endif -%}>
+    </a>
+{% if caption %}
+    <figcaption>{{ caption | safe }}</figcaption>
+{% endif -%}
+</figure>

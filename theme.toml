@@ -1,0 +1,28 @@
+name = "vishus"
+description = "Vishus"
+license = "MIT"
+homepage = "https://github.com/vishusandy/vishus_zola"
+demo = "https://vishusandy.github.io/"
+# The minimum version of Zola required
+min_version = "0.16.0"
+
+[extra]
+katex_enable = true      # include files for rendering math content
+katex_auto_render = true # automatically render math content
+enable_top_link = true   # if true show a link to the top of the page in the header
+
+# If using git uncomment the next line and link to your git repo
+# git_file_changes = "https://github.com/vishusandy/vishusandy.github.io/commits/main/content"
+
+# List each link for the header menu here.  Links are defined like:
+# [[extra.links]]
+# text = "Links"
+# url = "/pages/links"
+# static_url = false   # if true the url is not a local markdown file
+# new_window = false   # whether to open the link in a new window
+# attributes = ""      # custom attributes to add to the <a> tag
+
+
+[author]
+name = "Vishus"
+homepage = "https://github.com/vishusandy/vishus_zola"

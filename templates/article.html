@@ -33,10 +33,10 @@
     <div class="subtitle">
         {% if page.date and page.updated %}
             {%- if page.date %}<div class="created"><time title="Created" class="created" datetime="{{ page.date }}">{{ page.date }}</time></div>{% endif -%}
-            {%- if page.updated %}<div class="updated">{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</div>{% endif -%}
+            {%- if page.updated %}<div class="updated">{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | replace(from="-", to="_") | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</div>{% endif -%}
         {%- else -%}
             {%- if page.date %}<div class="created no-update"><time title="Created" class="created" datetime="{{ page.date }}">{{ page.date }}</time></div>{% endif -%}
-            {%- if page.updated %}<div class="updated">{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</div>{% endif -%}
+            {%- if page.updated %}<div class="updated">{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | replace(from="-", to="_") | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</div>{% endif -%}
         {% endif %}
     </div>
     {%- if page.description -%}

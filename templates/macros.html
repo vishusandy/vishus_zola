@@ -68,3 +68,14 @@
 {% endif %}
 {% endmacro tocs %}
 
+{% macro footer() %}
+<footer>
+    <ul>
+        {% if page %}
+        <li>&copy; 2022 Andrew Prindle</li>
+        <li><a href="https://github.com/vishusandy/vishusandy.github.io" target="_blank" rel="noreferrer noopener">Blog Source</a></li>
+        {%- if page.updated %}<li>{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | replace(from="-", to="_") | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</li>{% endif -%}
+        {% endif %}
+    </ul>
+</footer>
+{% endmacro footer %}

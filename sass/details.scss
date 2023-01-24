@@ -1,0 +1,110 @@
+@import 'vars.scss';
+
+details figure {
+    margin-bottom: 0px;
+}
+
+details>summary {
+    cursor: pointer;
+    border-collapse: collapse;
+    padding: .4rem 1rem .4rem 1rem;
+    font-family: var(--title-fonts);
+    font-size: 1.2rem;
+    list-style-type: none;
+    margin: -1rem -1rem -.4rem -1rem;
+    color: $details-hidden-summary-font-color;
+    font-weight: 600;
+    // color: vars.$details-shown-summary-font-color;
+}
+
+details>summary:hover {
+    background-color: $details-header;
+    border: 1px solid $details-border;
+    border-radius: 11px;
+    // margin-bottom: -8.5px;
+    margin-bottom: calc(-.4rem - 2px);
+    color: $details-shown-summary-font-color;
+}
+
+details>summary::before {
+    content: "\f063 ";
+    font: var(--fa-font-solid);
+    color: $details-arrow-to-open;
+    margin-right: .5rem;
+}
+
+details>summary:hover::before {
+    content: "\f063 ";
+    font: var(--fa-font-solid);
+    color: $details-arrow-to-open-hover;
+    margin-right: .5rem;
+}
+
+details[open]>summary::before {
+    content: "\f062 ";
+    font: var(--fa-font-solid);
+    color: $details-arrow-to-close;
+    margin-right: .5rem;
+}
+
+details[open]>summary:hover::before {
+    content: "\f062 ";
+    font: var(--fa-font-solid);
+    color: $details-arrow-to-close-hover;
+    margin-right: .5rem;
+}
+
+
+details[open]>summary {
+    background-color: $details-header;
+    border: 1px solid $details-border;
+    border-radius: 11px;
+    position: sticky;
+    top: calc(3.5rem + 1px);
+    border-bottom: 1px solid $details-border;
+    border-top: 1px solid $details-border;
+    margin: calc(-1rem - 1px) calc(-1rem - 1px) .7rem calc(-1rem - 1px);
+    z-index: 99;
+    color: $details-shown-summary-font-color;
+
+}
+
+
+details[open] {
+    padding-bottom: .1rem;
+    background-color: $details-bg;
+    // border: 1px solid $details-border;
+}
+
+details details summary {
+    position: static !important;
+}
+
+details {
+    padding: 1rem 1rem .4rem 1rem;
+    margin: 2.5rem 0px 1.5rem;
+}
+
+@media only screen and (min-width: $min-body-size) {
+    details {
+        margin: 2.5rem 1rem 1.5rem;
+    }
+}
+
+details h1,
+details h2,
+details h3,
+details h4,
+details h5,
+details h6 {
+    display: inline;
+}
+
+details h1 .zola-anchor,
+details h2 .zola-anchor,
+details h3 .zola-anchor,
+details h4 .zola-anchor,
+details h5 .zola-anchor,
+details h6 .zola-anchor {
+    display: none;
+}

@@ -1,0 +1,46 @@
+:root {
+    --default-fonts: Georgia, Palatino, "Palatino Linotype", "Times New Roman", "DejaVu Serif", serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --title-fonts: Trebuchet, Tahoma, Arial, sans-serif;
+    --system-fonts: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --inline-code-fonts: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+    --code-fonts: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', 'DejaVu Sans Mono', monospace;
+}
+
+$min-body-size: 850px;
+
+$font-color: #282828;
+$a-color: #212121;
+$dfn-hover-color: #504545;
+
+$header-bg: #fff;
+
+$subtitle-font-color: #55565c;
+$subtitle-link: #4c4d52;
+
+$details-header: #ececf0;
+$details-border: #c7cbd7;
+// $details-bg: #fbfbfb;
+$details-bg: #f7f7f7;
+$details-hidden-summary-font-color: #282828;
+$details-shown-summary-font-color: #4b4b4b;
+$details-arrow-to-open: #b4b1ac;
+$details-arrow-to-open-hover: #524e4a;
+$details-arrow-to-close: #b4b1ac;
+$details-arrow-to-close-hover: #524e4a;
+
+$figure-title-color: #282828;
+$figure-caption-color: #4c4e52;
+$img-border-color: #aaa;
+
+$toc-bg: #faf7f2;
+$toc-border: #e6e0d3;
+$toc-hr-bg: linear-gradient(90deg, rgba(247, 244, 239, 1) 0%, rgba(202, 195, 177, 1) 18%, rgba(209, 203, 187, 1) 82%, rgba(247, 244, 239, 1) 100%);
+
+$code-block-lang-color: #eee;
+$code-block-lang-bg: #878a8c;
+
+$code-block-color: #000;
+$code-block-bg: #f6f8fa;
+$code-block-border: #e5e5e5;
+
+$inline-code-bg: #1b1f2317;

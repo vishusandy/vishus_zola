@@ -1,0 +1,53 @@
+@import 'vars.scss';
+
+section.toc {
+    background-color: $toc-bg;
+    padding: .5rem;
+    margin: 2rem auto 2rem;
+    border-radius: 9px;
+    width: fit-content;
+    border: 1px solid $toc-border;
+}
+
+div.toc {
+    margin: 1rem 2rem;
+    line-height: 1.2rem;
+}
+
+div.toc h5 {
+    padding: 0px 1rem;
+    text-align: center;
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+div.toc div.top {
+    text-align: center;
+}
+
+div.toc hr {
+    height: 1px;
+    border: 0px;
+    background: $toc-hr-bg;
+    margin: 0px auto .6rem;
+    width: 65%;
+}
+
+
+div.toc p {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+
+div.toc>ul {
+    font-family: var(--title-fonts);
+    line-height: 1.6rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+    padding: 0px 1rem 0px 2rem;
+}
+
+div.toc li {
+    margin-bottom: .3rem;
+}

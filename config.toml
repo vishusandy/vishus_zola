@@ -10,7 +10,7 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-generate_feed = true
+generate_feed = false
 
 [markdown]
 # Whether to do syntax highlighting
@@ -54,13 +54,6 @@ static_url = false   # if true the url is not a local markdown file
 new_window = false   # whether to open the link in a new window
 attributes = ""      # custom attributes to add to the <a> tag
 
-[[extra.links]]
-text = "<i class=\"link-icon fa-brands fa-github\" alt=\"Go to my GitHub profile\" title=\"My GitGub\"></i>"
-url = "https://github.com/vishusandy"
-# this is a static url since it's not a link produced by Zola
-static_url = true
-new_window = true
-attributes = "aria-label=\"Open Github profile in a new window\""
 
 [[extra.links]]
 text = "<i class=\"link-icon fa-brands fa-mastodon\" alt=\"Go to my Mastodon profile\" title=\"My Mastodon profile\"></i>"
@@ -71,3 +64,11 @@ static_url = true
 new_window = false
 # extra attributes - add the rel="me" for mastodon
 attribues = "target=\"_blank\" rel=\"me noreferrer noopener\" aria-label=\"Open Mastodon profile in a new window\""
+
+[[extra.links]]
+text = "<i class=\"link-icon fa-brands fa-github\" alt=\"Go to my GitHub profile\" title=\"My GitGub\"></i>"
+url = "https://github.com/vishusandy"
+# this is a static url since it's not a link produced by Zola
+static_url = true
+new_window = true
+attributes = "aria-label=\"Open Github profile in a new window\""

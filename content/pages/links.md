@@ -13,9 +13,15 @@ updated = 2022-12-01
 <h2>Personal</h2>
 </summary>
 
-- [GitHub](https://github.com/vishusandy)
-- [Instagram](https://www.instagram.com/vishusandy/)
-- [Mastodon](https://social.linux.pizza/@vishus)
+- Socials
+    - [GitHub](https://github.com/vishusandy)
+    - [Instagram](https://www.instagram.com/vishusandy/)
+    - [Mastodon](https://social.linux.pizza/@vishus)
+- Repos
+    - [3d mazes](https://github.com/vishusandy/3d_mazes)
+    - [My Starship theme](https://github.com/vishusandy/absolutely_vishus)
+    - [My blog theme](https://github.com/vishusandy/vishus_zola)
+
 
 </details>
 
@@ -63,12 +69,12 @@ updated = 2022-12-01
 - ### Misc
     - [Researchers have a formula for getting in the flow - [Phys.org]](https://phys.org/news/2022-04-formula.html)
 
-## Languages
-- ### Rust
-    - [6 things you can do with the Cow in Rust - Dev.to](https://dev.to/kgrech/6-things-you-can-do-with-the-cow-in-rust-4l55)
-    - [Elegant and performant recursion in Rust - Inanna Malick](https://recursion.wtf/posts/rust_schemes/)
-- ### SQL
-    - [Rewrite OR to UNION in PostgreSQL queries - Cybertec](https://www.cybertec-postgresql.com/en/rewrite-or-to-union-in-postgresql-queries/)
+- ## Languages
+    - ### Rust
+        - [6 things you can do with the Cow in Rust - Dev.to](https://dev.to/kgrech/6-things-you-can-do-with-the-cow-in-rust-4l55)
+        - [Elegant and performant recursion in Rust - Inanna Malick](https://recursion.wtf/posts/rust_schemes/)
+    - ### SQL
+        - [Rewrite OR to UNION in PostgreSQL queries - Cybertec](https://www.cybertec-postgresql.com/en/rewrite-or-to-union-in-postgresql-queries/)
 
 </details>
 
