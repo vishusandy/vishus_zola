@@ -1,10 +1,17 @@
-name = "vishus"
-description = "Vishus"
+name = "Vishus Zola"
+description = "simple light theme for a Dev/Tech blog"
 license = "MIT"
 homepage = "https://github.com/vishusandy/vishus_zola"
 demo = "https://vishusandy.github.io/"
-# The minimum version of Zola required
 min_version = "0.16.0"
+
+
+compile_sass = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "vishus"
+extra_syntaxes_and_themes = ["syntax"]
 
 [extra]
 katex_enable = true      # include files for rendering math content
@@ -14,14 +21,46 @@ enable_top_link = true   # if true show a link to the top of the page in the hea
 # If using git uncomment the next line and link to your git repo
 # git_file_changes = "https://github.com/vishusandy/vishusandy.github.io/commits/main/content"
 
-# List each link for the header menu here.  Links are defined like:
-# [[extra.links]]
+# HEADER LINKS
+# Here are a couple examples of header links:
+
+# [[extra.header_links]]
 # text = "Links"
-# url = "/pages/links"
+# url = "/pages/links" # if this is blank or does not exist it will just show the text without a link
 # static_url = false   # if true the url is not a local markdown file
 # new_window = false   # whether to open the link in a new window
 # attributes = ""      # custom attributes to add to the <a> tag
+# page_only = false    # whether to only show on regular pages (not sections, etc)
 
+## Explanation of why there is the attributes
+# [[extra.header_links]]
+# text = "<i class=\"link-icon fa-brands fa-mastodon\" alt=\"Go to my Mastodon profile\" title=\"My Mastodon profile\"></i>"
+# url = "https://social.linux.pizza/@vishus"
+# static_url = true     # this is a static url since it's not a link produced by Zola
+# new_window = false    # `new_window=true` would override the `rel="me"` attribute; use `attributes` to open the link in a new window
+# # extra attributes - add the rel="me" for mastodon
+# attribues = "target=\"_blank\" rel=\"me noreferrer noopener\" aria-label=\"Open Mastodon profile in a new window\""
+
+
+# FOOTER LINKS
+# The footer links follow the same format as the header links
+# Here are a couple examples of footer links
+
+# [[extra.footer_links]]
+# url = ""
+# text = "&copy; 2023 Andrew Prindle"
+# static_url = true                   # if true the url is not a local markdown file
+# new_window = true                   # whether to open the link in a new window
+# attributes = ""                     # custom attributes to add to the <a> tag
+# pages_only = false
+
+# [[extra.footer_links]]
+# url = "https://github.com/vishusandy/vishusandy.github.io"
+# text = "Source"
+# static_url = true                                          # if true the url is not a local markdown file
+# new_window = true                                          # whether to open the link in a new window
+# attributes = ""                                            # custom attributes to add to the <a> tag
+# pages_only = true
 
 [author]
 name = "Vishus"

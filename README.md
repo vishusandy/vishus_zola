@@ -5,6 +5,16 @@ A configurable and simplistic dev blog template for [Zola](https://www.getzola.o
 
 Demo: [https://vishusandy.github.io](https://vishusandy.github.io)
 
+## Screenshots
+
+![Screenshot of the main index](index.png)
+
+[More screenshots](screenshots.md)
+
+## Installation
+
+See [installation](install.md)
+
 ## Configuration
 
 Everything can be configured in the `[extra]` section of the [`config.toml`](config.toml) file.  Descriptions of each variable are provided there.
@@ -22,23 +32,5 @@ Everything can be configured in the `[extra]` section of the [`config.toml`](con
 - link to git repo to show file history for updated pages
 - header displays a specified list of links
 - cool "top" link to go back to the top of a page
-
-## Screenshots
-
-Code:
-
-![Screenshot of code snippets](code.png)
-
-
-Article:
-
-![Screenshot of an article](article.png)
-
-
-Index:
-
-![Screenshot of the main index](index.png)
-
-
-
+- optional article description above the table of contents
 

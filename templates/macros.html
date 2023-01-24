@@ -11,17 +11,23 @@
     </div>
     {% endif %}
     
-    {% if config.extra.links %}
+    {% if config.extra.header_links %}
     <div class="links">
         <ul>
-            {% for link in config.extra.links %}
-            <li>
-                <a href="{% if link.static_url %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url) | safe }}{% endif %}"
-                    {%- if link.attribues %} {{ link.attribues | safe }}{% endif -%}
-                    {%- if link.new_window %} target="_blank" rel="noreferrer noopener"{% endif -%}
-                >{{ link.text | safe }}</a>
-            </li>
-            {% endfor %}
+            {% for link in config.extra.header_links -%}
+                {%- if not link.pages_only or link.pages_only and page -%}
+                    <li>
+                        {%- if link.url -%}
+                            <a href="{% if link.static_url %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url) | safe }}{% endif %}"
+                                {%- if link.attribues %} {{ link.attribues | safe }}{% endif -%}
+                                {%- if link.new_window %} target="_blank" rel="noreferrer noopener"{% endif -%}
+                            >{{ link.text | safe }}</a>
+                        {%- else -%}
+                            {{ link.text |safe }}
+                        {%- endif -%}
+                    </li>
+                {%- endif -%}
+            {%- endfor %}
         </ul>
     </div>
     {% endif %}
@@ -48,20 +54,20 @@
         <h5>Table of Contents</h5>
         <hr>
         <ul>
-            {% for h1 in page.toc %}
+            {% for h1 in page.toc -%}
             <li>
                 <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-                {% if h1.children %}
+                {% if h1.children -%}
                 <ul>
-                    {% for h2 in h1.children %}
+                    {% for h2 in h1.children -%}
                     <li>
                         <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
                     </li>
-                    {% endfor %}
+                    {% endfor -%}
                 </ul>
-                {% endif %}
+                {%- endif %}
             </li>
-            {% endfor %}
+            {%- endfor %}
         </ul>
     </div>
 </section>
@@ -69,13 +75,28 @@
 {% endmacro tocs %}
 
 {% macro footer() %}
+{% if config.extra.footer_links %}
 <footer>
     <ul>
-        {% if page %}
-        <li>&copy; 2022 Andrew Prindle</li>
-        <li><a href="https://github.com/vishusandy/vishusandy.github.io" target="_blank" rel="noreferrer noopener">Blog Source</a></li>
-        {%- if page.updated %}<li>{% if config.extra.git_file_changes %}<a href="{{ config.extra.git_file_changes }}{{ page.path | replace(from="-", to="_") | trim_end_matches(pat="/") | safe }}.md" target="_blank" rel="noreferrer noopener">{% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}</li>{% endif -%}
-        {% endif %}
+        {% for link in config.extra.footer_links %}
+            {%- if not link.pages_only or link.pages_only and page -%}
+                {%- if link.url %}
+                    <li>
+                    <a href="{% if link.static_url %}{{ link.url | safe }}{% else %}{{ get_url(path=link.url) | safe }}{% endif %}" {%- if
+                        link.attribues %} {{ link.attribues | safe }}{% endif -%} {%- if link.new_window %} target="_blank"
+                        rel="noreferrer noopener" {% endif -%}>{{ link.text | safe }}</a>
+                    </li>
+                {%- else %}
+                    <li>{{ link.text | safe }}</li>
+                {%- endif -%}
+            {%- endif -%}
+        {% endfor %}
+        {%- if page and page.updated %}<li>{% if config.extra.git_file_changes %}
+            <a href="{{ config.extra.git_file_changes }}{{ page.path | replace(from="-", to="_" ) | trim_end_matches(pat="/" ) | safe }}.md" target="_blank" rel="noreferrer noopener">
+                {% endif %}Updated <time title="Updated" class="updated" datetime="{{ page.updated }}">{{ page.updated }}</time>{% if config.extra.git_file_changes %}</a>{% endif %}
+        </li>
+        {%- endif %}
     </ul>
 </footer>
+{% endif %}
 {% endmacro footer %}
